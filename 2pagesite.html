@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Echoes of the Deep – SDG 14: Life Below Water</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    a {
+      color: #055a92;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #023e5a;
+    }
+    header {
+      background-color: #055a92;
+      color: white;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-logo {
+      height: 150px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    header p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-top: 0.1rem;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      padding: 0.75rem 1.25rem;
+      font-weight: 600;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      user-select: none;
+    }
+    nav a.active,
+    nav a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    main {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-height: 400px;
+    }
+    main h2 {
+      color: #055a92;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    main h5 {
+      color: #777;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .content-img {
+      width: 100%;
+      height: 200px;
+      background-color: #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+    main p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      font-weight: 600;
+      color: #333;
+      border-top: 1px solid #ccc;
+    }
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 0.25rem;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      .header-text {
+        align-items: center;
+      }
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .self-photo {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+      .about-text {
+        flex: none;
+      }
+    }
+    /* About section layout */
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .self-photo {
+      width: 180px;
+      height: auto;
+      border-radius: 6px;
+      flex-shrink: 0;
+      object-fit: cover;
+      display: block;
+    }
+    .about-text {
+      flex: 1;
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img
+      src="https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-5a1c-61fa-998a-52b86bdcad26/raw?se=2025-09-13T08%3A00%3A35Z&sp=r&sv=2024-08-04&sr=b&scid=b0921bd7-4283-51b7-a7bb-381bc3c7340c&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-13T02%3A30%3A11Z&ske=2025-09-14T02%3A30%3A11Z&sks=b&skv=2024-08-04&sig=0qgstg3Wb/5MHsD0C2Jww61e7Scvpjhy%2BPS7E3cni/w%3D"
+      class="header-logo"
+    />
+    <div class="header-text">
+      <h1>Echoes of the Deep</h1>
+      <p>SDG 14: Life Below Water</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#" id="nav-home" class="active">Home</a>
+    <a href="#" id="nav-about">About</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <!-- Home Part of the Website -->
+      <section id="section-home">
+        <article style="margin-top: 3rem;">
+          <h2>Background of the Problem</h2>
+          <p>People still bring up Sustainable Development Goal 14 these days. It's all about keeping oceans healthy while using their resources responsibly. Oceans take up most of the planet's surface area. They handle climate stuff, make oxygen, and feed billions through fish stocks and jobs. But human activity's messing things up bad. Plastic's everywhere in the water now. Millions of tons every year killing sea creatures that eat it or get tangled up. Ends up in our food chain eventually too. Overfishing's another headache wiping out important fish populations and wrecking whole ecosystems. Coastal communities relying on fishing for income are feeling it hard.</p>
+          <p>Coral reefs are having it rough these days too. Warmer seawater and acid levels from climate change are bleaching them out fast. When you add up pollution, overharvesting, and environmental shifts, the math doesn't look good for marine life long-term. The thing is, this isn't just an ocean problem anymore. It affects everyone through food supplies, weather patterns, even breathable air quality. Fixing it needs countries working together on serious conservation efforts before things get worse than they already are.</p>
+        </article>
+
+        <article style="margin-top: 3rem;">
+          <h2>Current Actions Being Taken</h2>
+          <p>Countries around the world have pledged to tackle marine pollution, stop overfishing, and expand protected coastal areas. Key legal frameworks, such as the Law of the Sea and newer agreements like the High Seas Treaty, lay the groundwork for better management of international waters.Collaborations are also forming across different sectors. For example, the Global Ocean Alliance is teaming up with NGOs and businesses to address specific challenges. The movement to establish Marine Protected Areas is gaining traction, with countries implementing stricter regulations to safeguard vulnerable underwater ecosystems. Additionally, public campaigns are increasingly focused on reducing plastic waste and promoting sustainable fishing practices.</p>
+          <p>While coastal cleanup projects attract attention, they often struggle to scale effectively. Maintaining these efforts over the long term requires consistent funding and political commitment across borders. Current legal frameworks set important standards, but they often lack effective enforcement when compliance issues arise .Protecting our oceans requires both high-level policy initiatives and grassroots behavioral changes. From treaty negotiations to individual choices about seafood and plastics, every action matters. Although we are seeing some progress, marine ecosystems will not stabilize without sustained efforts on multiple fronts.</p>
+        </article>
+      </section>
+
+      <!-- About Part of the Website -->
+      <section id="section-about" style="display:none;">
+        <div class="about-content">
+          <img src="https://scontent.fdvo1-2.fna.fbcdn.net/v/t39.30808-6/484791586_516328071545511_2686984084858703284_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEh2ZHoQScQ2M_qgTDIM7u0qHM7_Dkahfqoczv8ORqF-qgMyLgxBYMydQ6athQoFsj_i1gxHYrA9cochEfUeLmO&_nc_ohc=rOnU3tLCJ5AQ7kNvwEpiCaE&_nc_oc=AdlDsfQEssqY-8jPkre_kNr9zLuDgKtwXWO1EorWh0jWmo5CmtHHlxP-UR_Y6z3rRK4&_nc_zt=23&_nc_ht=scontent.fdvo1-2.fna&_nc_gid=HoJ_Q2-dlf2P4rmJSHruog&oh=00_AfYVZFQS_sgjwsA5SkMI6Ii0fRjsbBTRUYLp4h6GKIO4qQ&oe=68CB01CF"
+            alt="Gabrielle Hadley D. Matuguinas"
+            class="self-photo"
+          />
+          <div class="about-text">
+            <h2>About Us</h2>
+            <p>Everyone loves the beach don’t we? But who likes a beach with garbage floating everywhere harming fishes who have done nothing, what about dead fishes with plastic stuck to their necks and they’d just float around? No right? I’m Gabrielle Hadley D. Matuguinas from Echoes of the Deep, here to inform you all about our amazing works for the past years!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-projects" style="display:none;">
+        <article>
+          <h2>Projects</h2>
+          <p>Details about our marine conservation projects will be added here.</p>
+        </article>
+      </section>
+
+      <section id="section-contact" style="display:none;">
+        <article>
+          <h2>Contact</h2>
+          <p>Contact information and forms will be added here.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2024 Echoes of the Deep. All rights reserved.
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = {
+      home: document.getElementById('section-home'),
+      about: document.getElementById('section-about'),
+      projects: document.getElementById('section-projects'),
+      contact: document.getElementById('section-contact')
+    };
+
+    function showSection(sectionId) {
+      Object.values(sections).forEach(sec => sec.style.display = 'none');
+      sections[sectionId].style.display = 'block';
+
+      navLinks.forEach(link => link.classList.remove('active'));
+      document.getElementById('nav-' + sectionId).classList.add('active');
+    }
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = e.target.id.replace('nav-', '');
+        showSection(id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Show home section by default on page load
+    showSection('home');
+  </script>
+</body>
+</html>
